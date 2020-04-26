@@ -1,5 +1,7 @@
 # The Taiwan Social Distancing Application and Its Contact Tracing Algorithm
 
+`Poga Po<poga@ailabs.tw>`
+
 ## Introduction
 
 This document describes the contact tracing algorithm used by the social distancing application form Taiwan AI Labs. The social distancing APP is a community project aiming to reduce the spread of infectious diseases.
