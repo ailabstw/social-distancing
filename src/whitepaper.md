@@ -66,6 +66,8 @@ The backend is simple storage for infected IDs with no additional processing. It
 
 The server will also remove infected IDs older than 7 days to reduce resource usage and prevent abuse of data, while still being valuable about controlling the outbreak.
 
+To further anonymize the data when the infection case number is small, we continue to explore potential solutions such as adding spurious tokens or introducing mixing servers[5].
+
 ### Download and Notification with Risk
 
 Each day, the app will download a new infected hashed ID list from the server. It will find matches between the list and the local contact history. If a match is found, the user's risk score is calculated based on estimated distance and contact duration. The user will be notified if the calculated risk score is high. The app will also provide health care information to the user.
@@ -134,15 +136,15 @@ Our decentralized design fully respect an individual's decision and privacy. It 
 
 ## References
 
-* [Decentralized Privacy-Preserving Proximity Tracing](https://github.com/DP-3T/documents)
+1. [Decentralized Privacy-Preserving Proximity Tracing](https://github.com/DP-3T/documents)
 
-* [Bluetrace: Privacy-Preserving Cross-Border Contact Tracing](https://bluetrace.io/)
+2. [Bluetrace: Privacy-Preserving Cross-Border Contact Tracing](https://bluetrace.io/)
 
-* [Privacy-Preserving Contact Tracing by Apple/Google](https://www.apple.com/covid19/contacttracing/)
+3. [Privacy-Preserving Contact Tracing by Apple/Google](https://www.apple.com/covid19/contacttracing/)
 
-* [COMMISSION RECOMMENDATION (EU) 2020/518](https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1587153139410&uri=CELEX:32020H0518)
+4. [COMMISSION RECOMMENDATION (EU) 2020/518](https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1587153139410&uri=CELEX:32020H0518)
 
-* [Contact Tracing Mobile Apps for COVID-19: Privacy Considerations and Related Trade-offs](https://arxiv.org/pdf/2003.11511.pdf)
+5. [Contact Tracing Mobile Apps for COVID-19: Privacy Considerations and Related Trade-offs](https://arxiv.org/pdf/2003.11511.pdf)
 
-* [ACLU WHITE PAPER: THE LIMITS OF LOCATION TRACKING IN AN EPIDEMIC](https://www.aclu.org/report/aclu-white-paper-limits-location-tracking-epidemic)
+6. [ACLU WHITE PAPER: THE LIMITS OF LOCATION TRACKING IN AN EPIDEMIC](https://www.aclu.org/report/aclu-white-paper-limits-location-tracking-epidemic)
 
