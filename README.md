@@ -1,8 +1,10 @@
-# The Taiwan Social Distancing Application and Its Contact Tracing Algorithm
+## The Taiwan Social Distancing Application and Its Contact Tracing Algorithm
 
 This document describes the contact tracing algorithm used by the social distancing application form Taiwan AI Labs.
 
-## Build
+For more info, check the [full whitepaper](https://github.com/ailabstw/social-distancing/blob/master/build/whitepaper.pdf).
+
+### Build
 
 The following dependencies are required to build the PDF.
 
