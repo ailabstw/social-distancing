@@ -60,7 +60,7 @@ Each record requires 24 bytes (16bytes ID and 8 bytes timestamp). Assumes 10k ID
 
 ### Report when Infected
 
-When a user is tested infected, first they pass the IDs they've broadcast in the last 28 days through a crypto-secure hash function (we choose blake2b). Then they upload the list of hashed IDs to the backend server. The server aggregate all newly infected hashed IDs, remove out-dated IDs, then publishes a new list for the app to download.
+When a user is tested infected, first they pass the IDs they've broadcast in the last 28 days through a crypto-secure hash function (we choose blake2b). After provides basic contact information to the public health organization, they upload the list of hashed IDs to the backend server. The server aggregate all newly infected hashed IDs, remove out-dated IDs, then publishes a new list for the app to download.
 
 The backend is simple storage for infected IDs with no additional processing. Its job is to simply aggregate and serve the infected ID list to each app. Since no processing is required, the list can be efficiently shared via CDN or distributed servers, which lower the bandwidth cost of the backend.
 
