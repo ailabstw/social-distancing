@@ -48,7 +48,7 @@ To provide better contact tracing, it's necessary that the app can observe and r
 
 To avoid location tracking via broadcasted IDs, the app must frequently change the anonymous ID it's using. By default, the app will rotate to a new anonymous ID every 15 minutes. The app will broadcast the ID it's currently using via the BLE broadcast.
 
-Each day, the app will generate 96 unique, secure, anonymous ID with the cryptography library provided by the operating system. The length of each key is 128-bits. The length based on previously stated limitations. The short rotation interval is designed to prevent large-scale location tracking and avoid linking anonymous IDs back to an individual based on other real-world information.
+Each day, the app will generate 96 unique, secure, anonymous ID with the cryptography library provided by the operating system. The length of each key is 128-bits. The length is chosen based on previously stated limitations. The short rotation interval is designed to prevent large-scale location tracking and avoid linking anonymous IDs back to an individual based on other real-world information.
 
 The app store all IDs it used in the local device storage. However, IDs older than 28 days will be discarded to keep storage usage at a reasonable level.
 
@@ -56,11 +56,11 @@ The app store all IDs it used in the local device storage. However, IDs older th
 
 The app locally store each ID it received via BLE broadcast. The coarse timestamp (e.g. 'April 14") is also stored.
 
-Each record requires 24 bytes (16bytes ID and 8 bytes timestamp). Assumes 10k ID is received daily, about 6.4MB is required to save 28 days worth of data.
+Each record requires 24 bytes (16 bytes ID and 8 bytes timestamp). Assumes 10k ID is received daily, about 6.4MB is required to save 28 days worth of data.
 
 ### Report when Infected
 
-When a user is tested infected, first they pass the IDs they've broadcast in the last 28 days through a crypto-secure hash function (we choose blake2b). After providing basic contact information to the public health organization, they can upload their hashed IDs to the backend server. The server aggregate all newly infected hashed IDs, remove out-dated IDs, then publishes a new list for the app to download.
+When a user is tested infected, first they pass the IDs they've broadcast in the last 28 days through a crypto-secure hash function (we recommend `blake2b`). After providing basic contact information to the public health organization, they can upload their hashed IDs to the backend server. The server aggregate all newly infected hashed IDs, remove out-dated IDs, then publishes a new list for the app to download.
 
 The backend is simple storage for infected IDs with no additional processing. Its job is to simply aggregate and serve the infected ID list to each app. Since no processing is required, the list can be efficiently shared via CDN or distributed servers, which lower the bandwidth cost of the backend.
 
