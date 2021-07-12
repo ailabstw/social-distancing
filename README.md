@@ -17,3 +17,8 @@ $ make
 ```
 
 The PDF will be generated at `build/whitepaper.pdf`
+
+### Source
+
+* [iOS](https://github.com/ailabstw/social-distancing-android)
+* [Android](https://github.com/ailabstw/social-distancing-ios)
