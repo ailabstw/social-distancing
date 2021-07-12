@@ -2,7 +2,7 @@
 
 ## Source of apps 
 
-Please find source of Taiwan Social Distance, available in MIT license in the following repo,
+Please find source of Taiwan Social Distanc, available in MIT license in the following repo,
 
 - iOS: https://github.com/ailabstw/social-distancing-ios  
 - Android: https://github.com/ailabstw/social-distancing-android
